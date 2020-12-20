@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+  <title>Deba firebase javascript app</title>
+</head>
+<body>
+  
+  <div class="container my-5">
+    <h2>Recipes</h2>
+    <ul>
+      <!-- need to add user title -->
+    </ul>
+    <form>
+      <label for="recipe">Add a new recipe:</label>
+      <div class="input-group">
+        <input type="text" class="form-control" id="recipe" required>
+        <div class="input-group-append">
+          <input type="submit" value="add" class="btn btn-outline-secondary">
+        </div>
+        <button type="button" class="btn btn-outline-secondary unsub">UnsubScribe Changes</button>
+      </div>
+    </form>
+  </div>
+  
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-firestore.js"></script>
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyBW4DsSSlScHzaICvaYk3S2-8ZXoFQJEKE",
+    authDomain: "fir-deb-javascript.firebaseapp.com",
+    databaseURL: "https://fir-deb-javascript.firebaseio.com",
+    projectId: "fir-deb-javascript",
+    storageBucket: "fir-deb-javascript.appspot.com",
+    messagingSenderId: "546391581254",
+    appId: "1:546391581254:web:c6da002d995e637241e047",
+    measurementId: "G-EWFP9C11F3"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore();
+  firebase.analytics();
+</script>
+  <script src="script.js"></script>
+</body>
+</html>
